@@ -1,0 +1,5 @@
+Start
+  input a,b,c
+  S= (a+b+c)/3
+  output S
+End

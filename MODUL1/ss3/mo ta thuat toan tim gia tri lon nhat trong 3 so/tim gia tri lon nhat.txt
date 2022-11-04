@@ -1,0 +1,26 @@
+Start
+  input a,b,c
+  If a>b then 
+        If a>c then output a
+        Else output c
+ Else (a<b)
+        If b>c then output b
+	else output c
+End
+
+cach 2
+start
+ 	input a,b,c,max
+ 	max=a
+	if (max <b) then max =b
+ 	if (max <c) then max =c
+        
+output max
+end
+
+
+if a>b 
+	a>c -> a
+	else c 
+else(a<b)
+	b>c -> b
