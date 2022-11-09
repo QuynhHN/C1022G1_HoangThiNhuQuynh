@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>TÍNH ĐIỂM TB HỌC SINH</title>
+ <style>
+    table{
+        margin:0 auto;
+        background-color: orange;
+    }
+    .cot{
+        border: none; 
+    }
+    #btnXeploai{
+        margin-left: 90px;
+    }
+ </style>
+ <script>
+    function Tinhdiemtb()
+    {
+    var x1=document.getElementById('diem1');
+    var x2=document.getElementById('diem2');
+    var x3=document.getElementById('diem3');
+    if(x1.value=='' || x2.value==''|| x3.value=='')
+    {
+        alert('Bạn đã nhập thiếu giá trị vào ô nhập liệu');
+    }
+    else if(isNaN(x1.value)||isNaN(x2.value)||isNaN(x3.value))
+    {
+        alert('Kí tự bạn nhập không phải là số');  
+    }
+    var tb=document.getElementById('dtb');
+    tb=(parseFloat(x1.value)+parseFloat(x2.value)*2+parseFloat(x3.value)*3)/6;
+    var tbfix=tb.toFixed(2);//Lấy 2 số thập phân sau dấu phẩy và làm tròn
+    var xltb=document.getElementById('xeploai');
+    if(tbfix>=8)
+    {
+        xltb.innerText='Giỏi';
+    }
+    else if(tbfix>=6.5)
+    {
+        xltb.innerText='Khá';
+    }
+    else if(tbfix>=5)
+    {
+        xltb.innerText='Trung bình';
+    }
+    else xltb.innerText='Kém';
+    return tbfix;
+    }
+ </script>
+</head>
+<body>
+<h1 align='center' style="color:red">TÍNH ĐIỂM TRUNG BÌNH VÀ XẾP HẠNG CỦA HỌC SINH</h1>
+ <table border='1' cellpadding="0" cellspacing="30px">
+    <tr class="dong">
+        <td class="cot">Điểm 15P</td>
+        <td class="cot">
+         <input type='text' value="" name='diem1' id='diem1' placeholder="Nhập điểm 15P"/>
+        </td>
+       </tr>
+   <tr class="dong">
+    <td class="cot">Giữa Kỳ</td>
+    <td class="cot">
+     <input type='text' value="" name='diem2' id='diem2' placeholder="Nhập điểm Giữa Kỳ"/>
+    </td>
+   </tr>
+   <tr class="dong">
+    <td class="cot">Cuối Kỳ</td>
+    <td class="cot">
+     <input type='text' value="" name='diem3' id='diem3' placeholder="Nhập điểm Cuối Kỳ"/>
+    </td>
+   </tr>
+   <tr class="dong">
+    <td class="cot">Điểm TB</td>
+    <td class="cot">
+     <input type='text' value="" name='dtb' id='dtb' readonly/>
+    </td>
+   </tr>
+   <tr class="dong">
+    <td class="cot">Xếp loại</td>
+    <td class="cot" ><label id='xeploai' style="font-weight: bold;color:red"></label>
+     
+    </td>
+   </tr>
+   <tr class="dong">
+    <td colspan='2' class="cot">
+     <input type="button" value='Xếp loại' name="btnXeploai" id='btnXeploai' onclick="dtb.value=Tinhdiemtb()" />
+    </td>
+   </tr> 
+ </table>

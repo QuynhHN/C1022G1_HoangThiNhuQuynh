@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <body>
+    <p>Doanh số bán hàng theo tháng</p>
+        <input type="text" name="a" id="d"/>
+        <button onclick="Hoahong()">Hoa hồng</button>
+        <p id="demo"></p>
+    <script>
+        function Hoahong()
+        {
+            let a= document.getElementById('d').value;
+            let hoahong= a*0.03;
+            let hoahong1= a*0.02;
+            let hoahong2= a*0.01;
+            if(a>20){
+                document.getElementById("demo").innerHTML="Hoa hồng nhận được " + hoahong + "VND"
+            }
+            else if(a>10){
+                document.getElementById("demo").innerHTML="Hoa hồng nhận được " + hoahong1 + "VND"
+            }
+            else if(a>5){
+                document.getElementById("demo").innerHTML="Hoa hồng nhận được " + hoahong2 + "VND"
+            }
+            else {
+                document.getElementById("demo").innerHTML="Không có hoa hồng"
+            }
+        }
+    </script>
+    </body>
+</html>
