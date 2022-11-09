@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Tính chỉ số cân nặng</h2>
+<p>
+    <label for="kg">Nhập cân nặng: (kg)</label>
+    <input type="text" id="kg">
+</p>
+<p>
+    <label for="cm">Nhập chiều cao: (cm)</label>
+    <input type="text" id="cm">
+</p>
+<p>
+    <button onclick="ketqua()">Kiểm tra</button>
+</p>
+<div id="chiso"></div>
+</body>
+<script>
+    function ketqua() {
+        let a= +document.getElementById("kg").value
+        let b= +document.getElementById ("cm").value
+        let bmi= a/(b*2)
+
+        if(bmi<18){
+
+            document.getElementById("chiso").innerHTML="Underweight"
+        }
+        else if(bmi<25){
+
+            document.getElementById("chiso").innerHTML="Normal"
+        }
+        else if(bmi<30){
+
+            document.getElementById("chiso").innerHTML="Overweight"
+        }
+        else {
+
+            document.getElementById("chiso").innerHTML="Obese"
+        }
+    }
+
+</script>
+</html>

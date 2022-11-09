@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Kiểm tra số ngày trong </h2>
+<div>
+    <input type="text" id="thang">
+    <button onclick="layThang()">Tính số ngày</button>
+    <div id="demo"></div>
+
+</div>
+<script>
+
+    function layThang() {
+        //let month = +document.getElementById("thang").value;
+        let month = +prompt("thang")
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("demo").innerHTML="Tháng " + month + " có 31 ngày"
+
+                break;
+
+            case 2:
+                document.getElementById("demo").innerHTML="Tháng " + month + " có 28 hoặc 29 ngày"
+                break;
+
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById("demo").innerHTML="Tháng " + month + " có 30 ngày"
+                break;
+            default:
+                document.getElementById("demo").innerHTML="Vui lòng nhập lại tháng"
+
+
+        }
+    }
+</script>
+
+</body>
+</html>
