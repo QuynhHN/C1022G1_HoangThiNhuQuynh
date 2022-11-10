@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <div>
+            <h2>Tính thuế thua nhập cá nhân</h2>
+            <p>Số thuế phải nộp là</p>
+            <input type="text" style="width: 200px" id="tien" placeholder="Nhập vào lương của bạn">
+        </div>
+        <button style="margin: 10px" onclick="ketqua()">Check</button>
+        <div id="thue"></div>
+    </body>
+    <script>
+        function ketqua() {
+            let a = +document.getElementById("tien").value;
+            let thue =0;
+            if (a>15000000) {
+                thue = a * 0.3;
+            } else if (a >=7000000) {
+                thue = a*0.2;
+            } else {
+               thue = a*0.1
+            }
+            document.getElementById("thue").innerHTML = "Số tiền thuế là: " + (thue) + " VND"
+        }
+    </script>
 </html>
