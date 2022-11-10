@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Phuong trinh bac 2</title>
+    </head>
+    <body>
+        <h2>Phương trình bậc 2</h2>
+        <div>
+            <p>Nhập a:</p>
+            <input type="text" name="nhapa" id="a" placeholder="Nhập vào a">
+            <p>Nhập b:</p>
+            <input type="text" name="nhapb" id="b" placeholder="Nhập vào b">
+            <p>Nhập c:</p>
+            <input type="text" name="nhapc" id="c" placeholder="Nhập vào c">
+        </div>
+
+        <button style="margin: 10px" onclick="phuongtrinh()">Kết quả</button>
+        <div id="pt"></div>
+    </body>
+    <script>
+        function phuongtrinh() {
+            let a = +document.getElementById("a").value;
+            let b = +document.getElementById("b").value;
+            let c = +document.getElementById("c").value;
+            let d = (b * b) - (4 * a * c)
+            if (a == 0) {
+                alert("Hệ số a phải khác 0")
+            } else if (a == "" || b == "" || c == "") {
+                alert("Bạn đã nhập thiếu giá trị vào ô dữ liệu")
+            }
+
+            if (d < 0) {
+                document.getElementById("pt").innerHTML = "Phương trình vô nghiệm"
+            } else if (d == 0) {
+                document.getElementById("pt").innerHTML = "Phương trình có nghiệm kép x1 = x2 = " + (-b) / (2 * a)
+            } else if (d > 0) {
+                document.getElementById("pt").innerHTML = "Phương trình có 2 nghiệm x1 = " + (-b + Math.sqrt(d)) / (2 * a) + " và x2 =" + (-b - Math.sqrt(d)) / (2 * a)
+            }
+        }
+    </script>
+</html>

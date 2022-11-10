@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>age</title>
+    </head>
+    <body>
+        <div>
+            <h2>Kiểm tra tuổi</h2>
+            <input type="text" name="age" id="tuoi" placeholder="Nhập vào tuổi của bạn">
+        </div>
+        <button style="margin: 10px" onclick="ketqua()">Check</button>
+        <div id="kiemtra"></div>
+    </body>
+    <script>
+        function ketqua() {
+            //let age= parseInt(prompt("tuoi"))
+            let age = parseInt(document.getElementById("tuoi").value);
+
+            if (0 < age && age < 120) {
+
+                document.getElementById("kiemtra").innerHTML = age + " là tuổi"
+            } else {
+                document.getElementById("kiemtra").innerHTML = "Không phải là tuổi"
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <div>
+            <h2>Tính giá điện</h2>
+            <p>Số điện tiêu thụ</p>
+            <input type="text" style="width: 200px" id="tien" placeholder="Nhập vào số điện bạn đã sử dụng">
+        </div>
+        <button style="margin: 10px" onclick="ketqua()">Check</button>
+        <div id="tiendien"></div>
+    </body>
+    <script>
+        function ketqua() {
+            let a = +document.getElementById("tien").value;
+            let bac1 = 1678;
+            let bac2 = 1734;
+            let bac3 = 2014;
+            let bac4 = 2536;
+            let bac5 = 2834;
+            let bac6 = 2927;
+
+            if (0 < a && a <= 50) {
+                tienDien = a * bac1;
+            } else if (a <= 100) {
+                tienDien = 50 * bac1 + ((a - 50) * bac2);
+            } else if (a <= 200) {
+                tienDien = 50 * bac1 + (50 * bac2) + ((a - 100) * bac3);
+            } else if (a <= 300) {
+                tienDien = 50 * bac1 + (50 * bac2) + (100 * bac3) + ((a - 200) * bac4);
+            } else if (a <= 400) {
+                tienDien = 50 * bac1 + (50 * bac2) + (100 * bac3) + (100 * bac4) + ((a - 300) * bac5);
+            } else if (a > 401) {
+                tienDien = 50 * bac1 + (50 * bac2) + (100 * bac3) + (100 * bac4) + (100 * bac5) + ((a - 400) * bac6);
+            }
+            document.getElementById("tiendien").innerHTML = "Số tiền phải trả là: " + (tienDien + (tienDien * 0.1)) + " VND"
+        }
+    </script>
+</html>

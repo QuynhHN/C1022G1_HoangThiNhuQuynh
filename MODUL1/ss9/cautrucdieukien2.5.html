@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dien tich tam giac vuong</title>
+    </head>
+    <body>
+        <h2>Diện tích tam giác vuông</h2>
+        <p>Chiều cao:</p>
+        <div>
+            <input type="text" name="cd" id="chieucao" placeholder="Nhập vào chiều cao">
+            <p>Chiều dài đáy:</p>
+            <input type="text" name="cr" id="chieudai" placeholder="Nhập vào chiều dài đáy">
+        </div>
+        <button style="margin:10px" onclick="dientich()">Kết quả</button>
+        <div id="dientichtamgiac"></div>
+    </body>
+    <script>
+        function dientich() {
+            let a = +document.getElementById("chieucao").value
+            let b = +document.getElementById("chieudai").value
+            let s = (a * b) / 2
+            document.getElementById("dientichtamgiac").innerHTML = "Diện tích tam giác vuông: " + s
+
+        }
+    </script>
+</html>

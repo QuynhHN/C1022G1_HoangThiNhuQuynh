@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Phuong trinh bac 1</title>
+    </head>
+    <body>
+        <h2>Phương trình bậc 1</h2>
+        <p>Nhập a:</p>
+        <input type="text" name="nhapa" id="a" placeholder="Nhập vào a">
+        <p>Nhập b:</p>
+        <input type="text" name="nhapb" id="b" placeholder="Nhập vào b">
+        <br/>
+        <br/>
+        <button onclick="phuongtrinh()">Kết quả</button>
+        <div id="pt"></div>
+    </body>
+    <script>
+        function phuongtrinh() {
+            let a= +document.getElementById("a").value;
+            let b= +document.getElementById("b").value;
+            //let x= -b/a
+            if(a==0 && b==0){
+                document.getElementById("pt").innerHTML="Phương trình có vô số nghiệm"
+            }
+            else if(a==0 && b!=0){
+                document.getElementById("pt").innerHTML="Phương trình vô nghiệm"
+            }
+            else if(a!=0 && b==0){
+                document.getElementById("pt").innerHTML="Phương trình vô nghiệm"
+            }
+            else {
+                document.getElementById("pt").innerHTML="Phương trình có nghiệm duy nhất x=" + (-b)/a
+            }
+        }
+    </script>
+</html>
