@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <div id="demo"></div>
+    </body>
+    <script>
+        let num = '';
+        for (i = 1; i <= 100; i++) {
+            //let i=+prompt("num")
+            if (i == 99) {
+                alert("Đã hoàn thành")
+                break;
+            }
+            num = num + "Số " + i.toString() + '<br>'
+        }
+        document.getElementById('demo').innerHTML = num
+    </script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <div id="nd"></div>
+    </body>
+    <script>
+        let nhietDo= null;
+        do{
+            nhietDo= +prompt("Nhập vào nhiệt độ hiện tại")
+
+            if(nhietDo>100){
+                alert("Giảm nhiệt độ")
+            }
+            else if (nhietDo<20){
+                alert("Tăng nhiệt độ")
+            }
+            else
+                alert(nhietDo)
+        }
+        while (nhietDo>100 || nhietDo<20)
+
+    </script>
+</html>
