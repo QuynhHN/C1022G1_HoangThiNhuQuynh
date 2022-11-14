@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h2>Tổng của 20 số 5,10,15</h2>
+        <script>
+            let ax = null;
+            // for(i=5;i<=100;i++){
+            //     if(i%5==0){
+            //         ax=ax+i
+            //     }
+            // }
+            // document.write("Tổng: " + ax)
+
+            // for(i=5;i<=100;i+=5){
+            //         ax=ax+i
+            // }
+            // document.write("Tổng: " + ax)
+
+            // let i = 0
+            // while (i <= 100) {
+            //     i++
+            //
+            //     if (i % 5 == 0) {
+            //         ax = ax + i
+            //     }
+            // }
+            // document.write("Tổng: " + ax)
+
+            let i = 0
+            while (i < 100) {
+                i += 5
+                ax = ax + i
+            }
+            document.write("Tổng: " + ax)
+        </script>
+    </body>
 </html>

@@ -2,9 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h2>Tính n!</h2>
+<div id="demo"></div>
+<script>
+    let i=null
+    let n= +prompt("nhap vao")
+    let nx=1
+    if(n>0) {
+
+        for (i = 1; i <= n; i++) {
+            nx = nx * i;
+        }document.write("tong " + nx)
+    }
+    else{
+        document.write("phai nhap lai n")
+    }
+
+    // if(n>0){
+    //     do{
+    //          n=+prompt("nhap vao")
+    //         i++
+    //     }
+    //     while (i<=n)
+    //     {
+    //
+    //         nx=nx*i
+    //
+    //     }document.write("tong " + nx)
+    //
+    // }
+    // else {
+    //     document.write("phai nhap lai n")
+    // }
+
+</script>
 </body>
 </html>
