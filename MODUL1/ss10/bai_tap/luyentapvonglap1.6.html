@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+            let a=0
+            let i=0
+            let s=0
+            while(a<31){
+                if(i%7==0){
+                    a++;
+                    s=s+i
+                    document.write("i: "+i +'<br>')
+                } i++;
+            }document.write("Tổng: " +s)
+        </script>
+    </body>
 </html>
