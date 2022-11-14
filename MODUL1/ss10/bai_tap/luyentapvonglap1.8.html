@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="game" onclick="doanSo()">Chơi</button>
+<script>
+    function doanSo() {
+        let n = +prompt('Nhập vào số bạn muốn đoán trong khoảng: ');
+        let b=+prompt('Bạn dự đoán số: ')
+        let a=Math.floor(Math.random()*n);
+        for (let i=1;i<=3; i++){
+            if (a== b) {
+                alert('Bạn dự đoán đúng. Chúc mừng bạn')
+                break;
+            } else if (i<=3) {
+                if (b <a) alert('Số cần tìm lớn hơn. Mời bạn chọn lại');
+                else if (b>a) alert('Số cần tìm nhỏ hơn. Mời chọn lại');
+            } else if (i>3) alert('Bạn đã hết lượt');
+        }
+    }
+</script>
+</body>
+</html>
