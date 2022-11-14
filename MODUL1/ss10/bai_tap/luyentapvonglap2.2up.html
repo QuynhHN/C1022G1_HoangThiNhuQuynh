@@ -17,11 +17,9 @@
                 let n = parseInt(document.getElementById("nhap").value);
                 let nx = 1
                 if (n > 0) {
-                    for (let i = 1; i <= n; i++) 
-                    {
+                    for (let i = 1; i <= n; i++) {
                         nx = nx * i;
-                    }
-                    document.getElementById("demo").innerHTML="Tổng " + nx
+                    }document.getElementById("demo").innerHTML="Tổng " + nx
                 } else {
                     document.getElementById("demo").innerHTML="Phải nhập lại n"
                 }
