@@ -6,15 +6,18 @@
     </head>
     <body>
         <script>
-            let n=+prompt('Bạn muốn nhập bao nhiêu phần tử')
-            let a=[];
-            for(let i=0;i<n;i++){
-                a[i]=+prompt('nhập các phần tử')
-                if(a[i]=='V'){
-                document.write('V is in the array')
-                }else {
-                document.write('V is not in the array')
+            let a = [];
+            let c;
+            let v =[];
+            for(let i = 0; i < 10; i++) {
+                a[i] = +prompt("Nhap vao gia tri mang a:");
             }
+            v = +prompt("Nhap vao gia tri cua V:");
+            c = a.indexOf(v);
+            if(c != -1) {
+                document.write("V is in the array");
+            } else {
+                document.write("V is not in the array");
             }
         </script>
     </body>
