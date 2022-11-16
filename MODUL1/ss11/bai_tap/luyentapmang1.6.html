@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-    </head>
-    <body>
-        <script>
-            let a = [];
-            let c;
-            let v =[];
-            for(let i = 0; i < 10; i++) {
-                a[i] = +prompt("Nhap vao gia tri mang a:");
-            }
-            v = +prompt("Nhap vao gia tri cua V:");
-            c = a.indexOf(v);
-            if(c != -1) {
-                document.write("V is in the array");
-            } else {
-                document.write("V is not in the array");
-            }
-        </script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>bai 6</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let c;
+    let v = [];
+    for (let i = 0; i < 10; i++) {
+        a[i] = +prompt("Nhập vào giá trị mảng a:");
+    }
+    v = +prompt("Nhập vào giá trị của V:");
+    c = a.indexOf(v);
+    if (c != -1) {
+        document.write("V is in the array");
+    } else {
+        document.write("V is not in the array");
+    }
+</script>
+</body>
 </html>

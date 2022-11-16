@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xoa V khoi mang</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 5, 5, 5, 6, 7, 8];
+    let v = +prompt('nhập vào phần tử cần xóa')
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == v) {
+            for (let j = i; j < arr.length - 1; j++) {
+                arr[j] = arr[j + 1]
+            }
+            arr[arr.length - 1] = 0;
+            i--;
+        }
+    }
+    document.write(arr)
+
+</script>
+</body>
+</html>

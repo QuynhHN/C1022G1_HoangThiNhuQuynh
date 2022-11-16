@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu dien</title>
+</head>
+<body>
+<form>
+    <input type="text" id="keyWord" placeholder="Nhập từ bất kỳ">
+    <button onclick="check()">Transelate</button>
+</form>
+<script>
+    let arrEng = ['apple', 'house', 'able', 'afraid', 'basic']
+    let arrVie = ['quả táo', 'ngôi nhà', 'có năng lực', 'sợ hãi', 'cơ bản']
+
+    function check() {
+        let keyWord = document.getElementById("keyWord").value;
+        let indexWord = arrEng.indexOf(keyWord);
+        document.write(arrVie[indexWord])
+    }
+</script>
+</body>
+</html>

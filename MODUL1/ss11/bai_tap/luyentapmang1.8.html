@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Sap xep theo thu tu giam dan</title>
 </head>
 <body>
 <script>
-    let a=[]
-    for(let i=0;i<10;i++){
-        a[i]=+prompt('Nhap vao gia tri mang a');
+    let a = []
+    for (let i = 0; i < 10; i++) {
+        a[i] = +prompt('Nhập vào giá tri mảng a');
     }
-    document.write(a +'<br>')
-    a.sort(function(a, b){return b - a});
-    document.write(a.sort())
+    document.write(a + '<br>')
+    a.sort(function (a, b) {
+        return b - a
+    });
+    document.write('Sắp xếp mảng theo thứ tự giảm dần:' + a.sort())
 </script>
 </body>
 </html>

@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Noi hai mang b va a vao mang c</title>
 </head>
 <body>
 <script>
-    let a=Array(10)
-    let b=Array(10)
-    let c=[]
-    for(i=0;i<a.length;i++){
-        a[i]=+prompt(`nhap vao a[${i}]:`)
+    let a = Array(10)
+    let b = Array(10)
+    let c = []
+    for (i = 0; i < a.length; i++) {
+        a[i] = +prompt(`Nhập vào a[${i}]:`)
     }
-    for(i=0;i<b.length;i++){
-        b[i]=+prompt(`nhap vao b[${i}]:`)
+    for (i = 0; i < b.length; i++) {
+        b[i] = +prompt(`Nhập vào b[${i}]:`)
     }
-    document.write(c.concat(b,a))
+    document.write('Mảng c: ' + c.concat(b, a))
 
 </script>
 </body>
