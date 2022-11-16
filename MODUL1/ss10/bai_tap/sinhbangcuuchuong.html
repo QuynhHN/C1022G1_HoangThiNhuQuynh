@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-    </head>
-    <body>
-        <h2>Bảng cửu chương</h2>
-        <script>
-            let i, j, s;
-            let result='<table border="2px">';
-            for (i = 1; i <= 9; i++) {
-                result=result+'<tr>'
-                for (j = 2; j <= 9; j++) {
-                    s=i*j
-                    result=result + '<td>' +j+'x'+i+'='+s+ '</td>';
-                }result=result+'</tr>'
-            }result =result+'</table>';
-            document.write(result)
-        </script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bảng cửu chương</h2>
+<script>
+    let i, j, s;
+    let result = '<table border="2px">';
+    for (i = 1; i <= 9; i++) {
+        result = result + '<tr>'
+        for (j = 2; j <= 9; j++) {
+            s = i * j
+            result = result + '<td>' + j + 'x' + i + '=' + s + '</td>';
+        }
+        result = result + '</tr>'
+    }
+    result = result + '</table>';
+    document.write(result)
+</script>
+</body>
 </html>
