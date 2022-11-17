@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay the ki tu trong mang</title>
+</head>
+<body>
+<script>
+    let a= prompt('nhập vào giá trị mảng')
+    let c=a.split('')
+    for(let i=0; i<a.length; i++){
+        if(c[i]=='-'){
+            c[i]='_';
+        }
+    }
+    document.write(c.join(''))
+    
+</script>
+</body>
+</html>

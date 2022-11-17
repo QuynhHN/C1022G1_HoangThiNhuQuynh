@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dem so tu</title>
+</head>
+<body>
+<script>
+    let str = 'Đếm số từ trong một chuỗi';
+    let arr = str.split(' ')
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] != '') {
+            count++
+        }
+    }
+    document.write('Chuỗi có ' + count + ' từ')
+
+
+    //cách 2
+    // document.write('Chuỗi có ' + arr.length +' từ')
+</script>
+</body>
+</html>
