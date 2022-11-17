@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra so nguyen to</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let count = 0
+        for (let i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                count++;
+            }
+        }
+        if (count == 2) {
+            return true
+        }
+        return false
+    }
+
+    let n = 1
+    while (n < 10000) {
+        if (isPrime(n)) {
+            document.write(n + '<br>')
+        }
+        n++;
+    }
+
+
+</script>
+</body>
+</html>
