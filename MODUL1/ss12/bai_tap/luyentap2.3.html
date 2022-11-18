@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh giai thua</title>
+</head>
+<body>
+<script>
+    function giaiThua(n) {
+        let a = 1
+        for (i = 1; i <= n; i++) {
+            a = a * i
+        }
+        return a
+    }
+
+    let n = +prompt('Nhập vào số:');
+    document.write('Giai thừa = ' + giaiThua(n))
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim gia tri nho nhat</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhập vào một số');
+    let b = +prompt('Nhập vào một số');
+    let c = +prompt('Nhập vào một số');
+
+    function soNhoNhat(a, b, c) {
+        if (a < b && a < c) {
+            return a
+        } else if (b < a && b < c) {
+            return b
+        } else {
+            return c
+        }
+    }
+
+    document.write('Số nhỏ nhất là: ' + soNhoNhat(a, b, c));
+</script>
+</body>
+</html>
