@@ -5,14 +5,29 @@
     <title>Dao nguoc cac phan tu</title>
 </head>
 <body>
+<h2>Nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.</h2>
 <script>
-    let n = +prompt('Bạn muốn nhập bao nhiêu phần tử')
-    let a = [];
-    for (let i = 0; i < n; i++) {
-        a[i] = +prompt('nhập các phần tử')
+    let a = +prompt("Nhập vào độ dài của mảng: ");
+    let arr = [];
+    let b = [];
+    let count = 0;
+    for (let i = 0; i < a; i++) {
+        arr[i] = +prompt(`Nhập vào giá trị mảng ${i}`);
     }
-    document.write(a + '<br>')
-    document.write(a.reverse() + '<br>')
+    document.write('Mảng nhập vào là: [' + arr + '] <br>');
+    for (let j = arr.length - 1; j >= 0; j--) {
+        b[count] = arr[j];
+        count++;
+    }
+    document.write('Mảng đảo ngược là : [' +b + ']');
+
+    // let n = +prompt('Bạn muốn nhập bao nhiêu phần tử')
+    // let a = [];
+    // for (let i = 0; i < n; i++) {
+    //     a[i] = +prompt('nhập các phần tử')
+    // }
+    // document.write(a + '<br>')
+    // document.write(a.reverse() + '<br>')
 </script>
 </body>
 </html>

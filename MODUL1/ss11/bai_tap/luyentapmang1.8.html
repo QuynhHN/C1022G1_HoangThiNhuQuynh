@@ -6,15 +6,33 @@
 </head>
 <body>
 <script>
-    let a = []
+    let arr = [];
+    let min = 0;
     for (let i = 0; i < 10; i++) {
-        a[i] = +prompt('Nhập vào giá tri mảng a');
+        arr[i] = +prompt(`Nhập vào giá trị mảng ${i}`);
     }
-    document.write(a + '<br>')
-    a.sort(function (a, b) {
-        return b - a
-    });
-    document.write('Sắp xếp mảng theo thứ tự giảm dần:' + a.sort())
+    document.write('Mảng nhập vào là: [' + arr + '] <br>');
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                min = arr[i];
+                arr[i] = arr[j];
+                arr[j] = min;
+            }
+        }
+    }
+    document.write('Sắp xếp mảng theo thứ tự giảm dần: [' + arr + ']');
+
+    // let a = [];
+    // for (let i = 0; i < 10; i++) {
+    //     a[i] = +prompt('Nhập vào giá tri mảng a');
+    //
+    // }
+    // document.write(a + '<br>');
+    // a.sort(function (a, b) {
+    //     return b - a;
+    // });
+    // document.write('Sắp xếp mảng theo thứ tự giảm dần:' + a.sort());
 </script>
 </body>
 </html>
