@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle</title>
+</head>
+<body>
+<h2>Xây dựng lớp mô tả hình chữ nhật</h2>
+<canvas id="rectangleCanvas" , width="300px" , height="200px"></canvas>
+<div>
+    <input style="margin: 10px" type="text" id="width" placeholder="Nhập vào chiều rộng">
+    <input style="margin: 10px" type="text" id="length" placeholder="Nhập vào chiều dài">
+    <button style="margin: 10px" onclick="changeSize()">changeSize</button>
+</div>
+<script>
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        setLength(newLength) {
+            this.length = newLength;
+        }
+
+        setWidth(newWidth) {
+            this.width = newWidth;
+        }
+
+        getArea() {
+            return this.length * this.width;
+        }
+
+        getPerimeter() {
+            return (this.length + this.width) * 2;
+        }
+
+        drawRec() {
+            let canvas = document.getElementById('rectangleCanvas');
+            let ctx = canvas.getContext("2d");
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(20, 20, this.width, this.length);
+        }
+    }
+
+    let myRectangle = new Rectangle(380, 160);
+    document.write("<br>" + "Diện tích: " + myRectangle.getArea());
+    document.write("<br>" + " Chu vi: " + myRectangle.getPerimeter());
+    // myRectangle.setLength(300);
+    // myRectangle.setWidth(180);
+    // document.write('<br>' + ' Diện tích khi thay đổi chiều dài và chiều rộng: ' + myRectangle.getArea())
+    // myRectangle.drawRec();
+
+    function changeSize() {
+        let newLength = document.getElementById("length").value;
+        let newWidth = document.getElementById("width").value;
+        myRectangle.setWidth(newWidth);
+        myRectangle.setLength(newLength);
+        myRectangle.drawRec()
+    }
+
+</script>
+</body>
+</html>

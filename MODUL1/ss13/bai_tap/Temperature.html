@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<h2>Xây dựng lớp mô tả Temperature</h2>;
+<script>
+    class Temperature {
+        constructor(celsius) {
+            this.celsius = celsius;
+        }
+
+        convertToFahrenheit() {
+            return this.celsius * 9 / 5 + 32;
+        }
+
+        convertToKenvin() {
+            return this.celsius + 273;
+        }
+    }
+
+    let myTemperature = new Temperature(25);
+    myTemperature.convertToFahrenheit();
+    document.write('Độ F:' + myTemperature.convertToFahrenheit());
+    myTemperature.convertToKenvin();
+    document.write('<br>' + 'Độ K: ' + myTemperature.convertToKenvin());
+</script>
+</body>
+</html>
