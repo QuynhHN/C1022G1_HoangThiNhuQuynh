@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mo phong cau chuyan Adam va Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this._weight = weight;
+        }
+
+        getWeight() {
+            return this._weight;
+        }
+
+        setWeight(weight) {
+            this._weight = weight;
+        }
+
+        decrease() {
+            if (this.isEmpty()){
+                document.write('Hết táo');
+            }else {
+                this._weight--;
+            }
+        }
+
+
+        isEmpty() {
+            if (this._weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender == 1) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+        setGender() {
+            if (this.gender == 1) {
+                document.write(this.name + 'Male' + '<br>');
+            } else (this.gender == 0)
+            {
+                document.write(this.name + 'Female');
+            }
+        }
+
+        checkApple(Apple) {
+            if (apple.isEmpty()) {
+                document.write('Het tao de an');
+            } else {
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
