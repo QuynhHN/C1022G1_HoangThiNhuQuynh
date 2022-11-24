@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tam giac can dac</title>
+</head>
+<body>
+<script>
+    let h = 5;
+    let a = h;
+    let b = h;
+    for (let i = 1; i <= h; i++) {
+        for (let j = 1; j <= 2 * h - 1; j++) {
+            if (j >= a && j <= b) {
+                document.write('*');
+            } else {
+                document.write('&nbsp&nbsp');
+            }
+        }
+        a--;
+        b++;
+        document.write('<br>');
+    }
+</script>
+</body>
+</html>

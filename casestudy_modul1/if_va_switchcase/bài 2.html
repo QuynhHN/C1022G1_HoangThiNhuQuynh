@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra nguyen am phu am</title>
+</head>
+<body>
+<p>Kiểm tra ký tự trong bảng chữ cái tiếng anh là nguyên âm hay phụ âm</p>
+<div>
+    <input type="text" id="nhap" placeholder="Nhập vào kí tự cần kiểm tr">
+    <button onclick="kiemTra()" id="kiemTra">Check</button>
+    <p id="ketQua"></p>
+</div>
+<script>
+    function kiemTra() {
+        let ch=document.getElementById("nhap").value;
+
+        // if( character<'A'|| character >'z'){
+        //     document.getElementById("kiemTra()").innerHTML="Kí tự không nằm trong bảng chữ cái"
+        //
+        // }
+        // let ch = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E'];
+
+        switch (ch) {
+            case 'o':
+            case 'u':
+            case 'i':
+            case 'a':
+            case 'e':
+            case 'O':
+            case 'U':
+            case 'I':
+            case 'A':
+            case 'E':
+                document.getElementById('ketQua').innerHTML = 'Là nguyên âm'
+                break;
+         default:
+             document.getElementById('ketQua').innerHTML = 'Là phụ âm'
+                break;
+        }
+    }
+
+
+</script>
+</body>
+</html>

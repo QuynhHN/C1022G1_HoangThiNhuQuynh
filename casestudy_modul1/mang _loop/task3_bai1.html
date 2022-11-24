@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prefix sums</title>
+</head>
+<body>
+<p>Nhập vào phần tử mảng a</p>
+<div>
+    <input type="text" id="nhap" placeholder=" Nhập vào phần tử">
+    <button onclick="addArray()" id="add">Add</button>
+</div>
+<div id="result"></div>
+<div id="findresult"></div>
+<script>
+    let x = 0;
+    let a = [];
+    let b = [];
+
+    function addArray() {
+        a[x] = +document.getElementById('nhap').value;
+        x++;
+        document.getElementById("nhap").value = "";
+        document.getElementById("result").innerHTML = 'Mảng a:' + a;
+        b[0] = a[0];
+        for (let i = 1; i < a.length; i++) {
+            b[i] = b[i - 1] + a[i];
+
+        }
+        document.getElementById("findresult").innerHTML = 'Mảng b:' + b;
+
+    }
+</script>
+</body>
+</html>

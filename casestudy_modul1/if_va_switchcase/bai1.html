@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh luong nhan vien</title>
+</head>
+<body>
+<p>Lương nhân viên</p>
+<div>
+    <input type="text" id="luong" placeholder="Nhập vào lương của bạn">
+    <button onclick="check()" id="check">Kiểm tra</button>
+    <p id="tinhLuong()"></p>
+</div>
+<script>
+    function check() {
+        let luongNv = document.getElementById('luong').value;
+        let thue
+        let luongSauthue;
+        if (luongNv == 15000000) {
+            thue = luongNv * 0.2;
+            document.getElementById("tinhLuong()").innerHTML = 'Tiền thuế phải trả:' + thue + 'vnd';
+        } else if (luongNv > 7000000 && luongNv < 15000000) {
+            thue = luongNv * 0.1;
+            document.getElementById("tinhLuong()").innerHTML = 'Tiền thuế phải trả:' + thue + 'vnd';
+        } else (luongNv < 7000000)
+        {
+            thue = luongNv * 0.05;
+            document.getElementById("tinhLuong()").innerHTML = 'Tiền thuế phải trả:' + thue + 'vnd';
+        }
+        luongSauthue=luongNv-thue;
+        document.getElementById("tinhLuong()").innerHTML= 'Tiền lương bạn nhận được:' +luongSauthue +'vnd';
+    }
+</script>
+</body>
+</html>
