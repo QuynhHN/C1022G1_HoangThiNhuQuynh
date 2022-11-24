@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let n, x, y, c;
+    let a = [];
+    let b = [];
+
+    n = +prompt("Nhập số lượng phân số: ");
+    for (let i = 1; i <= n; i++) {
+        x = +prompt("Nhập tử số thứ " + i);
+        a.push(x);
+        y = +prompt("Nhập mẫu số thứ " + i);
+        b.push(y);
+    }
+    let p = 0;
+    c = a[0] / b[0];
+    for (let i = 1; i <= n; i++) {
+        console.log(c);
+        if (a[i] / b[i] > c) {
+            c = a[i] / b[i];
+            p = i;
+        }
+    }
+    document.write("Tử số: " + a + '<br>');
+    document.write("Mẫu số:" + b + '<br>');
+    document.write(a[p] + "/" + b[p] + " là phân số lớn nhất, có chỉ số là " + p);
+</script>
+</body>
+</html>
