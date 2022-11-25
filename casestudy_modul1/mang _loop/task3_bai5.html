@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 5</title>
+    <style>
+        *{
+            padding: 5px;
+            margin: 5px auto;
+        }
+        body{
+            width:960px; margin:0px auto; padding:5px; background: #EBFAFE;
+        }
+        .menu{
+            float: left;
+        }
+        .hoadon{
+            width: 30%;
+            border:1px dotted #990000;
+            float: right;
+        }
+        #h1{
+            border-bottom:1px dotted black;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <h1>Menu đồ uống</h1>
+    <div>
+        <button id="a" onClick="gia(this.id)">1. Coffee</button>
+        <button id="b" onClick="gia(this.id)">2. Nước cam vắt</button>
+        <button id="c" onClick="gia(this.id)">3. Nước ép cà rốt</button>
+    </div>
+    <div>
+        <button id="d" onClick="gia(this.id)">4. Nước ép cà chua</button>
+        <button id="e" onClick="gia(this.id)">5. Nước lọc</button>
+        <button id="f" onClick="gia(this.id)">6. Nước dừa</button>
+    </div>
+    <div>
+        <button id="g" onClick="gia(this.id)">7. Thoát gọi món</button>
+    </div>
+    <div id="kq"></div>
+</div>
+<div class="hoadon">
+    <h1>Hóa đơn</h1>
+    <p>Xin chào</p>
+    <div id="h1"></div>
+    <div id="h2"></div>
+</div>
+<script>
+    let p1=0,p2=0,p3=0,p4=0,p5=0,p6=0, sum=0, d1 =0,d2 =0,d3 =0,d4 =0,d5 =0,d6 =0;
+    let m1="";
+    function gia(id){
+        switch(id){
+            case "a":
+                d1++;
+                p1 = +prompt("Coffee (20k/ 1 ly). Mời bạn nhập số lượng: ");
+                break;
+            case "b":
+                d2++;
+                p2 = +prompt("Cam vắt (15k/ 1 ly). Mời bạn nhập số lượng: ");
+                break;
+            case "c":
+                d3++
+                p3 = +prompt("Cà rốt (25k/ 1 ly). Mời bạn nhập số lượng: ");
+
+                break;
+            case "d":
+                p4 = +prompt("Cà chua (25k/ 1 ly). Mời bạn nhập số lượng: ");
+
+                d4++;
+                break;
+            case "e":
+                d5++;
+                p5 = +prompt("Nước lọc (10k/ 1 chai). Mời bạn nhập số lượng: ")
+
+                break;
+            case "f":
+                d6++;
+                p6 = +prompt("Nước dừa (20k/ 1 quả). Mời bạn nhập số lượng: ")
+
+                break;
+            case "g":
+                if(d1>0){
+                    m1 = m1+"<br>Coffee: " +p1;
+                }
+                if(d2>0){
+                    m1= m1+ "<br>Cam vắt: " +p2;
+                }
+                if(d3>0){
+                    m1= m1+ "<br>Cà rốt: " +p3;
+                }
+                if(d4>0){
+                    m1= m1+ "<br>Cà chua: " +p4;
+                }
+                if(d5>0){
+                    m1= m1+ "<br>Nước lọc: " +p5;
+                }
+                if(d6>0){
+                    m1= m1+ "<br>Nước dừa: " +p6;
+                }
+                sum = parseInt(p1*20 + p2*15 + p3*25 + p4*25 + p5*10 + p6*20);
+                document.getElementById("h1").innerHTML = m1;
+                document.getElementById("h2").innerHTML = "Tổng tiền: "+ sum +"000 VND";
+                break;
+
+        }
+    }
+</script>
+</body>
+</html>
