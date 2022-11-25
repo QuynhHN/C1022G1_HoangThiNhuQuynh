@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim so luong ki tu chung</title>
+</head>
+<body>
+<script>
+    let str1 = prompt('Nhập vào kí tự');
+    let arr1 = str1.split('');
+    let str2 = prompt('Nhập vào kí tự');
+    let arr2 = str2.split('');
+    let arr3 = [];
+    let a;
+    for (let i = 0; i < arr1.length; i++) {
+        a = arr2.indexOf(arr1[i]);
+        if (a !== -1) {
+            arr3.push(arr1[i]);
+            arr2.splice(a, 1)
+        }
+    }
+    document.write(arr3)
+</script>
+</body>
+</html>

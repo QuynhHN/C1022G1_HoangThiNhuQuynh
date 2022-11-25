@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập kí tự');
+    let arr = str.split('');
+    let arr2 = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr2.indexOf(arr[i]) === -1) {
+            arr2.push(arr[i]);
+        }
+    }
+    alert(arr2);
+</script>
+</body>
+</html>
