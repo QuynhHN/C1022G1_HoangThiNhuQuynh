@@ -13,14 +13,7 @@
 </div>
 <script>
     function kiemTra() {
-        let ch=document.getElementById("nhap").value;
-
-        // if( character<'A'|| character >'z'){
-        //     document.getElementById("kiemTra()").innerHTML="Kí tự không nằm trong bảng chữ cái"
-        //
-        // }
-        // let ch = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E'];
-
+        let ch = document.getElementById("nhap").value;
         switch (ch) {
             case 'o':
             case 'u':
@@ -32,10 +25,10 @@
             case 'I':
             case 'A':
             case 'E':
-                document.getElementById('ketQua').innerHTML = 'Là nguyên âm'
+                document.getElementById('ketQua').innerHTML = 'Là nguyên âm';
                 break;
-         default:
-             document.getElementById('ketQua').innerHTML = 'Là phụ âm'
+            default:
+                document.getElementById('ketQua').innerHTML = 'Là phụ âm';
                 break;
         }
     }

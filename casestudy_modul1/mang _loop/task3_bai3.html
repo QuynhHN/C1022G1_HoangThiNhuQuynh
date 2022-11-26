@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    let n, x, y, c;
+    let n, x, y, max;
     let a = [];
     let b = [];
 
@@ -17,12 +17,12 @@
         y = +prompt("Nhập mẫu số thứ " + i);
         b.push(y);
     }
-    let p = 0;
-    c = a[0] / b[0];
+    let p = 0; //vi tri
+    max = a[0] / b[0];
     for (let i = 1; i <= n; i++) {
-        console.log(c);
-        if (a[i] / b[i] > c) {
-            c = a[i] / b[i];
+        console.log(max);
+        if (a[i] / b[i] > max) {
+            max = a[i] / b[i];
             p = i;
         }
     }

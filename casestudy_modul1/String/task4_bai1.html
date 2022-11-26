@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<h2>Chuẩn hóa xâu ký tự</h2>
+<script>
+    let str = prompt('Nhập vào một chuỗi');
+    let a = str.toLowerCase();
+    let arr = a.split(' ');
+    document.write('Trước khi chuẩn hóa: ' + str + '<br>');
+    alert(arr);
+    let result = '';
+    let newarr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== '') {
+            newarr.push(arr[i]);
+        }
+    }
+    alert(newarr);
+    for (let j = 0; j < newarr.length; j++) {
+        result += newarr[j][0].toUpperCase() + newarr[j].slice(1) + ' ';
+    }
+    document.write('Sau khi chuẩn hóa: ' + result + '<br>');
+
+    function findLongestWord() {
+        let arr1 = result.split(' ');
+        let max = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i].length >= max) {
+                max = arr1[i];
+            }
+        }
+        return max;
+    }
+
+    document.write('Từ dài nhất trong xâu kí tự: ' + findLongestWord());
+</script>
+</body>
+</html>

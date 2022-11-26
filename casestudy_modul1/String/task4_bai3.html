@@ -5,6 +5,7 @@
     <title>Tim so luong ki tu chung</title>
 </head>
 <body>
+<h3>Tìm số lượng kí tự chung giữa 2 xâu kí tự</h3>
 <script>
     let str1 = prompt('Nhập vào kí tự');
     let arr1 = str1.split('');
@@ -16,10 +17,10 @@
         a = arr2.indexOf(arr1[i]);
         if (a !== -1) {
             arr3.push(arr1[i]);
-            arr2.splice(a, 1)
+            arr2.splice(a, 1);
         }
     }
-    document.write(arr3)
+    document.write('2 xâu có kí tự chung: '+ arr3);
 </script>
 </body>
 </html>

@@ -5,14 +5,29 @@
     <title>bai4</title>
 </head>
 <body>
+<h2>Nhập một số từ bàn phím và in ra màn hình bằng chữ</h2>
 <script>
+    let num=['0','1','2','3','4','5','6','7','8','9'];
     let letter=['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín'];
     let number= prompt('Nhập vào số');
-    let result= '';
-    for(let i=0; i<number.length;i++){
-        result= result + letter[+number[i]] + ' ';
+    let arr=number.split('');
+    document.write('Số nhập vào: ' + number + '<br>');
+    let arr1=[];
+    for (let i = 0; i <arr.length ; i++) {
+        for (let j = 0; j < num.length; j++) {
+            if(arr[i]===num[j]){
+                arr1.push(letter[j]);
+            }
+        }
+
     }
-    document.write(result)
+document.write('Viết bằng chữ: ' + arr1.join(''));
+
+    // let result= '';
+    // for(let i=0; i<number.length;i++){
+    //     result= result + letter[+number[i]] + ' ';
+    // }
+    // document.write(result);
 </script>
 </body>
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai2</title>
+</head>
+<body>
+<h2>Đếm các số nguyên tố có trong mảng đó</h2>
+<script>
+    let n = +prompt('Nhập độ dài mảng 2 chiều');
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let m = prompt('Nhập độ dài mảng thứ ' + i);
+        let arr1 = [];
+        for (let j = 0; j < m; j++) {
+            let a = +prompt('Nhập phần tử thứ ' + j + 'của mảng thứ' + i);
+            arr1.push(a);
+        }
+        arr.push(arr1);
+    }
+    console.log(arr);
+
+    function prime(number) {
+        let count = 0;
+        let countSNT = 0;
+        if (number >= 2) {
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    count++;
+                }
+            }
+            if (count === 2) {
+                countSNT++;
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+    }
+
+    let arrNew = [];
+    for (i = 0; i < arr.length; i++) {
+        for (j = 0; j < arr[i].length; j++) {
+            if (prime(arr[i][j])) {
+                arrNew.push(arr[i][j]);
+            }
+        }
+    }
+    document.write('Các số nguyên tố trong mảng là: ' + arrNew);
+
+    // let snt = [];
+    // let count = 0;
+    // let countSNT = 0;
+    // for (let i = 1; i < arr.length; i++) {
+    //     for (let j = 0; j < arr[i].length; j++) {
+    //         if (arr[i][j] >= 2) {
+    //             for (let k = 1; k <= arr[i][j]; k++) {
+    //                 if (arr[i][j] % k === 0) {
+    //                     count++;
+    //                 }
+    //             }
+    //             if (count === 2) {
+    //                 snt.push(arr[i][j]);
+    //                 countSNT++;
+    //             }
+    //         }
+    //         count = 0;
+    //     }
+    // }
+    // console.log(snt);
+
+</script>
+</body>
+</html>
